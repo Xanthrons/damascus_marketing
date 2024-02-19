@@ -1,0 +1,108 @@
+:root {
+  --dam-blue: rgb(29, 53, 103);
+  --dam-orange: #f27b21;
+  --max-width: 1440px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: bigillia;
+  src: url(../fonts/Bigilla.otf);
+}
+@font-face {
+  font-family: bigillia_bold;
+  src: url(../fonts/Bigilla-Bold.otf);
+}
+@font-face {
+  font-family: neutral_face;
+  src: url(../fonts/NeutralFace.otf);
+}
+@font-face {
+  font-family: neutral_face_bold;
+  src: url(../fonts/NeutralFace-Bold.otf);
+}
+body {
+  background-color: #e0e0e0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-family: "neutral_face_bold", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--dam-blue);
+}
+.page__container {
+  display: flex;
+  padding-left: 100px;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  width: 100%;
+}
+.page__not__found {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  width: 70%;
+}
+.page__not__found span {
+  font-size: clamp(50%, 13vw, 19.35rem);
+  line-height: 89%;
+  color: var(--dam-blue);
+  font-family: bold;
+  overflow: hidden;
+  font-family: "bigillia_bold", cursive;
+}
+.span404 {
+  display: inline-block;
+  width: max-content;
+  font-size: clamp(3rem, 11vw, 10.35rem);
+  text-align: center;
+  padding: 5px 50px;
+  border-radius: 300px;
+  border: 2px solid var(--dam-orange);
+}
+.home__btn {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+.home__btn button {
+  padding: 140px 75px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-family: "neutral_face", sans-serif;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: var(--dam-orange);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.home__btn button:hover {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 1024px) {
+  .home__btn button {
+    padding: 100px 53.57px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .home__btn button {
+    padding: 70px 37.5px;
+  }
+  .page__not__found {
+    width: 90%;
+  }
+  .span404 {
+    padding: 5px 20px;
+  }
+}
